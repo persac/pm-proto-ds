@@ -1,69 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/skeleton.css">
+  <link rel="stylesheet" href="./css/ss-standard.css">
+  <link rel="stylesheet" href="./css/app.css">
   <title>Guide - Patty Morgan</title>
   <script src="./vue.js"></script>
   <script src="./jquery.js"></script>
   <style>
-    html {
-      height: 100%;
-    }
-    body {
-      font-family: sans-serif;
-      margin: 50px;
-      background: #111;
+    button {
+      border: none;
+      padding: 0 20px;
+      margin: 0;
+      border-radius: 20px;
+      background-color: #1C51FF;
       color: white;
+      letter-spacing: none;
+      height: auto;
+      font-size: 15px;
+      line-height: 1.5em;
+      text-transform: none;
+      overflow: hidden;
+      margin-top: 15px;
+      font-weight: normal;
     }
     #questions {
       position: relative;
       z-index: 1;
       font-size: 24px;
+      margin-left: 200px;
+      color: black;
     }
     #questions > li {
-      margin-top: 50px;
-      animation: showQuestion .4s;
-    }
-    #questions button {
-      border-radius: 40px;
-      border: none;
-      cursor: pointer;
-      padding: 8px 36px;
-      margin: 10px 10px 10px 0;
-      font-size: 24px;
-      background: white;
-      color: #1c51ff;
-      outline: none;
-    }
-    #questions button:hover {
-      background: #87f6d8
+      margin-top: 150px;
+      animation: showQuestion .8s;
     }
     #questions .done button {
-      display: none !important;
+      background: white;
+      color: #ccc;
     }
     #questions .done button.active {
-      background: #87f6d8;
+      background: #1C51FF;
+      color: #fff;
       display: inline-block !important;
       cursor: normal;
     }
     #questions button.img {
+      box-shadow: 0 0 8px rgba(0,0,0,0.4);
       padding: 0;
+      height: auto;
       border-radius: 0;
-      background: transparent;
     }
     #questions button.img img {
       vertical-align: middle;
     }
+    #questions button.active.img img,
     #questions button.img:hover img {
-      opacity: 0.5;
-    }
-    #questions .done button.active.img:hover img {
-      opacity: 1;
+      mix-blend-mode: multiply
     }
 
     #questions {
       list-style: none;
       padding: 0;
       margin: 0;
+      margin-left: 200px;
+      margin-bottom: 200px;
     }
 
     @keyframes showQuestion {
@@ -80,21 +82,31 @@
 </head>
 <body>
   <div id="app">
+    <nav id="nav-main">
+      <div id="link-home">
+        <a href="/index.html">
+          <img src="/assets/logo.png"/>
+        </a>
+      </div>
+    </nav>
     <ol id="questions">
       <li>
-        <p>Hi I'm Patty!</p>
-        <button>Hi!</button>
+        <p>Hi, I'm Patty!</p>
       </li>
       <li>
         <p>I'm here to try and help you discover art you like.</p>
       </li>
       <li>
-        <p>How is life?</p>
-        <button class="img"><img height="300" src="http://i.giphy.com/3o7TKyZo07qCddZWlW.gif"></button>
-        <button class="img"><img height="300" src="https://media.giphy.com/media/WoJWstkF4mRlC/source.gif"></button>
+        <button>Hi!</button>
       </li>
       <li>
-        <p>Okay. I'll take that into account.</p>
+        <img height="400" src="http://i.giphy.com/nXolxB21CRyAE.gif">
+      </li>
+      <li>
+        <p>How is life?</p>
+        <button class="img"><img height="200" src="http://i.giphy.com/l0HlMG1EX2H38cZeE.gif"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
+        <button class="img"><img height="200" src="http://i.giphy.com/9u5SmANtz7zIQ.gif"></button>
       </li>
       <li>
         <p>Tell me something about yourself...</p>
@@ -102,17 +114,16 @@
         <button>I think chewing gum can make your brain think more efficiently.</button>
       </li>
       <li>
-        <p>Oh. I see. You're one of those.</p>
-      </li>
-      <li>
         <p>How would you fold this?</p>
-        <p><img width="200" src="./larix/kubus-1.png"></p>
+        <p><img height="400" src="./larix/kubus-1.png"></p>
         <button class="img"><img width="120" src="./larix/kubus-2.png"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
         <button class="img"><img width="120" src="./larix/kubus-3.png"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
         <button class="img"><img width="120" src="./larix/kubus-4.png"></button>
       </li>
       <li>
-        <p><img height="200" src="http://i.giphy.com/UKkes2qN2T70s.gif"></p>
+        <p><img height="400" src="http://i.giphy.com/UKkes2qN2T70s.gif"></p>
       </li>
       <li>
         <p>Well done.</p>
@@ -120,18 +131,20 @@
       <li>
         <p>What does your house look like?</p>
         <button class="img"><img height="200" src="./larix/ext-1.jpg"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
         <button class="img"><img height="200" src="./larix/ext-2.jpg"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
         <button class="img"><img height="200" src="./larix/ext-3.jpg"></button>
       </li>
       <li>
         <p>I was asking about the inside.</p>
         <button class="img"><img height="200" src="./larix/int-1.jpg"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
         <button class="img"><img height="200" src="./larix/int-2.jpg"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
         <button class="img"><img height="200" src="./larix/int-3.jpg"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
         <button class="img"><img height="200" src="./larix/int-4.jpg"></button>
-      </li>
-      <li>
-        <p>Seriously? I didn't think people actually lived like this.</p>
       </li>
       <li>
         <p>Let's focus on art for now.</p>
@@ -139,19 +152,25 @@
       <li>
         <p>Which of these works do you like most?</p>
         <button class="img"><img height="200" src="./larix/figuartief-midtone.jpg"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
         <button class="img"><img height="200" src="./larix/geo-1.jpg"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
         <button class="img"><img height="200" src="./larix/rauw-concept.jpg"></button>
       </li>
       <li>
         <p>How about these three?</p>
         <button class="img"><img height="200" src="./larix/figuratief-kleur.jpg"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
         <button class="img"><img height="200" src="./larix/geo-2.jpg"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
         <button class="img"><img height="200" src="./larix/rauw-foto.jpg"></button>
       </li>
       <li>
         <p>And these?</p>
         <button class="img"><img height="200" src="./larix/figuratief-zw.jpg"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
         <button class="img"><img height="200" src="./larix/geo-detail.jpg"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
         <button class="img"><img height="200" src="./larix/rauw-schilder.jpg"></button>
       </li>
       <li>
@@ -165,6 +184,7 @@
         <p>How does this make you feel?</p>
         <p><img src="./larix/crocs.jpg" height="400"></p>
         <button class="img"><img height="200" src="http://i.giphy.com/1KoN1DMBnCMWk.gif"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
         <button class="img"><img height="200" src="http://i.giphy.com/3oz8xViyweSpykSoBq.gif"></button>
       </li>
       <li>
@@ -172,11 +192,6 @@
         <p><img src="./larix/rorschach.jpg" height="400"></p>
         <button>Wow! Little effort, great result!</button>
         <button>This isn't art! It's a Rorschach test. Go fool someone else!</button>
-      </li>
-      <li>
-        <p>How do you see people</p>
-        <button>RUBENS WERK MET MENSEN</button>
-        <button>BLACK FRIDAY NARIGHEID</button>
       </li>
       <li>
         <p>When you buy something for your house it better be...</p>
@@ -187,33 +202,49 @@
         <button>DARK!</button>
       </li>
       <li>
-        <p>Pick one!</p>
-        <button>COLOR</button>
-        <button>COLOR</button>
-        <button>COLOR</button>
-        <button>COLOR</button>
-        <button>COLOR</button>
-        <button>COLOR</button>
-        <button>COLOR</button>
-        <button>COLOR</button>
-        <button>COLOR</button>
+        <p>Choose a color pallet you like</p>
+        <button class="img"><img height="200" src="http://i.giphy.com/7gsCJpB7bQVOg.gif"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
+        <button class="img"><img height="200" src="http://i.giphy.com/CfyjyzXuzzGEg.gif"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
+        <button class="img"><img height="200" src="http://i.giphy.com/C5wV9PvZKSHmM.gif"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
+        <button class="img"><img height="200" src="http://i.giphy.com/X6EZKp9pPJc1G.gif"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
+        <button class="img"><img height="200" src="http://i.giphy.com/ucOhjj7VqEh9e.gif"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
+        <button class="img"><img height="200" src="http://i.giphy.com/rlvK5lMK6U1Uc.gif"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
+        <button class="img"><img height="200" src="http://i.giphy.com/pdOoDSm518NLG.gif"></button>
       </li>
       <li>
-        <p>When you go dancing, what does it look like</p>
-        <button>COLOR</button>
-        <button>COLOR</button>
-        <button>COLOR</button>
-        <button>COLOR</button>
-        <button>COLOR</button>
-        <button>COLOR</button>
-        <button>COLOR</button>
-        <button>COLOR</button>
-        <button>COLOR</button>
+        <p>When you go dancing, what does it look like?</p>
+        <button class="img"><img height="200" src="http://i.giphy.com/1dqag4rHL6C5i.gif"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
+        <button class="img"><img height="200" src="http://i.giphy.com/JhW0l7xGG5Phu.gif"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
+        <button class="img"><img height="200" src="http://i.giphy.com/fSNFVLdzTHjSE.gif"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
+        <button class="img"><img height="200" src="http://i.giphy.com/Y4w5XPeZ1nIvm.gif"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
+        <button class="img"><img height="200" src="http://i.giphy.com/ck7l5os89YXXq.gif"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
+        <button class="img"><img height="200" src="http://i.giphy.com/CA7HECghiJDZ6.gif"></button>
       </li>
       <li>
-        <p>Okay, that's enough.</p>
+        <p>And in what kind of venue would this take place?</p>
+        <button class="img"><img height="200" src="http://www.fermacell.dk/dk/img/DR_koncertsal620.jpg"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
+        <button class="img"><img height="200" src="http://heretoday.dk/blog/wp-content/files/2016/05/johncarpenter-koncerthuset-0019ht-620x400.jpg"></button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
+        <button class="img"><img height="200" src="https://cbswcbsfm.files.wordpress.com/2011/04/53349243_10.jpg"></button>
+
       </li>
       <li>
+        <p>Okay, I think I know enough.</p>
+      </li>
+      <li>
+        <p><img src="http://i.giphy.com/Fk8RuBgkzX4vm.gif" height="400"></p>
         <p>Let me find some collections of art you will like.</p>
       </li>
       <li>
@@ -222,13 +253,21 @@
       <li>
         <p>
           <a v-bind:href="'/collection.html#' + database.collections[0].id" target="_blank">
-            {{ database.collections[0].title }}
+            • {{ database.collections[0].title }}
           </a>
           <br>
           <a v-bind:href="'/collection.html#' + database.collections[1].id" target="_blank">
-            {{ database.collections[1].title }}
+            • {{ database.collections[1].title }}
           </a>
+          <p><button>Thanks!</button></p>
         </p>
+      </li>
+      <li>
+        <p><img src="http://i.giphy.com/WD8AQFfxJKx8c.gif" height="200"></p>
+        <p>You're welcome</p>
+      </li>
+      <li>
+        <p>Come <a href="guide.html">talk to me again</a> when you want some more ideas.</p>
       </li>
     </ol>
     <div id="wallpaper"></div>
@@ -255,6 +294,10 @@
       }
       currentQuestion++;
       var $currentQuestion = $questions.eq(currentQuestion);
+      if(!$currentQuestion.length) {
+        return;
+      }
+
       $currentQuestion.show();
 
       var $buttons = $currentQuestion.find('button');
