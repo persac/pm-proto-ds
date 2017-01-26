@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homepage - Patty Morgan</title>
+  <script src="./vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>HOMEPAGE</h1>
+    <ul>
+      <li v-for="collection in database.collections">
+        <a v-bind:href="'/collection.html#' + collection.id">
+          {{ collection.title }}
+        </a>
+      </li>
+    </ul>
+    <a href="guide.html">GUIDE</a>
+  </div>
+
+  <script src="database.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        database: database,
+      }
+    });
+  </script>
+</body>
+</html>

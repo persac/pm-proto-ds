@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homepage - Patty Morgan</title>
+  <script src="./vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <a href="index.html">home</a>
+    <h1>{{ currentCollection.title }}</h1>
+    <ol>
+      <li v-for="work in currentCollection.works">
+        <a v-bind:href="'/work.html#' + currentCollection.id + '-' + work.id">
+          {{ work.title }}
+          ({{ work.artist }})
+        </a>
+      </li>
+    </ol>
+  </div>
+
+  <script src="database.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        database: database,
+      },
+      computed: {
+        currentCollection: function () {
+          return this.database.collections.find(function (collection) {
+            return collection.id === window.location.hash.substr(1);
+          })
+        }
+      }
+    });
+  </script>
+</body>
+</html>
