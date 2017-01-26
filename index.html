@@ -1,20 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>Homepage - Patty Morgan</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/skeleton.css">
+  <link rel="stylesheet" href="./css/ss-standard.css">
+  <link rel="stylesheet" href="./css/app.css">
   <script src="./vue.js"></script>
 </head>
 <body>
   <div id="app">
-    <h1>HOMEPAGE</h1>
-    <ul>
-      <li v-for="collection in database.collections">
-        <a v-bind:href="'/collection.html#' + collection.id">
-          {{ collection.title }}
+    <nav id="nav-main">
+        <div id="link-home"><a href="/index.html">Patty Morgan</a></div>
+        <ul>
+          <li id="link-art">Art</li>
+          <li id="link-artists">Artists</li>
+          <li id="link-blog">Blog</li>
+          <li id="link-search" class="ss-icon">search</li>
+          <li id="link-user">You</li>
+        </ul>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <a class="eight columns collection" :href="'/collection.html#' + database.collections[0].id">
+          <div class="label">
+            <h2>
+              {{ database.collections[0].title }}
+            </h2>
+            <p>
+              {{ database.collections[0].short }}
+            </p>
+          </div>
         </a>
-      </li>
-    </ul>
-    <a href="guide.html">GUIDE</a>
+        <div class="four columns collection">
+          <div class="label">
+            <h2>Artist Name</h2>
+            <p>Description</p>
+          </div>
+      </div>
+      <div class="row">
+      </div>
+      <ul>
+        <li v-for="collection in database.collections">
+          <a v-bind:href="'/collection.html#' + collection.id">
+            {{ collection.title }}
+          </a>
+        </li>
+      </ul>
+      <a href="guide.html">GUIDE</a>
+    </div>
   </div>
 
   <script src="database.js"></script>
