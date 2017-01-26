@@ -5,32 +5,23 @@
   <script src="./vue.js"></script>
   <script src="./jquery.js"></script>
   <style>
-    #wallpaper {
-      display: block;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: red;
-      z-index: 0;
-      background: #1c51ff;
-      opacity: 0.2;
-      background-blend-mode: multiply;
-    }
     html {
       height: 100%;
     }
     body {
       font-family: sans-serif;
-      margin: 150px;
-      background: #1c51ff;
+      margin: 50px;
+      background: #111;
       color: white;
     }
     #questions {
       position: relative;
       z-index: 1;
       font-size: 24px;
+    }
+    #questions > li {
+      margin-top: 50px;
+      animation: showQuestion .4s;
     }
     #questions button {
       border-radius: 40px;
@@ -52,20 +43,38 @@
     #questions .done button.active {
       background: #87f6d8;
       display: inline-block !important;
+      cursor: normal;
     }
     #questions button.img {
       padding: 0;
       border-radius: 0;
       background: transparent;
     }
+    #questions button.img img {
+      vertical-align: middle;
+    }
     #questions button.img:hover img {
       opacity: 0.5;
+    }
+    #questions .done button.active.img:hover img {
+      opacity: 1;
     }
 
     #questions {
       list-style: none;
       padding: 0;
       margin: 0;
+    }
+
+    @keyframes showQuestion {
+      0% {
+        transform: translateY(80px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -78,10 +87,14 @@
       </li>
       <li>
         <p>I'm here to try and help you discover art you like.</p>
-        <p>Let's talk.</p>
+      </li>
+      <li>
         <p>How is life?</p>
-        <button class="img"><img src="http://i.giphy.com/3o7TKyZo07qCddZWlW.gif"></button>
-        <button class="img"><img src="https://media.giphy.com/media/WoJWstkF4mRlC/source.gif"></button>
+        <button class="img"><img height="300" src="http://i.giphy.com/3o7TKyZo07qCddZWlW.gif"></button>
+        <button class="img"><img height="300" src="https://media.giphy.com/media/WoJWstkF4mRlC/source.gif"></button>
+      </li>
+      <li>
+        <p>Okay. I'll take that into account.</p>
       </li>
       <li>
         <p>Tell me something about yourself...</p>
@@ -89,74 +102,76 @@
         <button>I think chewing gum can make your brain think more efficiently.</button>
       </li>
       <li>
-        <p>Oh. I see. You're one of those people. Never mind.</p>
-        <p>How would you solve this?</p>
+        <p>Oh. I see. You're one of those.</p>
+      </li>
+      <li>
+        <p>How would you fold this?</p>
         <p><img width="200" src="./larix/kubus-1.png"></p>
         <button class="img"><img width="120" src="./larix/kubus-2.png"></button>
         <button class="img"><img width="120" src="./larix/kubus-3.png"></button>
         <button class="img"><img width="120" src="./larix/kubus-4.png"></button>
       </li>
       <li>
-        <p>What's your house like?</p>
-        <button>Great interior, small family photo</button>
-        <button>Crappy house, great art</button>
+        <p><img height="200" src="http://i.giphy.com/UKkes2qN2T70s.gif"></p>
       </li>
       <li>
-        <button>Monument</button>
-        <button>Fabriek</button>
-        <button>Flat</button>
-        <button>Klein huis</button>
+        <p>Well done.</p>
       </li>
       <li>
-        <p>This artist made this conceptual artwork</p>
-        <button>Cool!</button>
-        <button>Who cares!??</button>
+        <p>What does your house look like?</p>
+        <button class="img"><img height="200" src="./larix/ext-1.jpg"></button>
+        <button class="img"><img height="200" src="./larix/ext-2.jpg"></button>
+        <button class="img"><img height="200" src="./larix/ext-3.jpg"></button>
       </li>
       <li>
-        <p>Which work do you like most?</p>
-        <button>Shaped</button>
-        <button>Detailed</button>
-        <button>Abstract</button>
+        <p>I was asking about the inside.</p>
+        <button class="img"><img height="200" src="./larix/int-1.jpg"></button>
+        <button class="img"><img height="200" src="./larix/int-2.jpg"></button>
+        <button class="img"><img height="200" src="./larix/int-3.jpg"></button>
+        <button class="img"><img height="200" src="./larix/int-4.jpg"></button>
       </li>
       <li>
-        <button>Detailed</button>
-        <button>Shaped</button>
-        <button>Abstract</button>
+        <p>Seriously? I didn't think people actually lived like this.</p>
       </li>
       <li>
-        <button>Abstract</button>
-        <button>Shaped</button>
-        <button>Detailed</button>
+        <p>Let's focus on art for now.</p>
       </li>
       <li>
-        <p>This artist spends a lot of time to create an artwork</p>
-        <button>I don't mind</button>
-        <button>Love it!</button>
+        <p>Which of these works do you like most?</p>
+        <button class="img"><img height="200" src="./larix/figuartief-midtone.jpg"></button>
+        <button class="img"><img height="200" src="./larix/geo-1.jpg"></button>
+        <button class="img"><img height="200" src="./larix/rauw-concept.jpg"></button>
       </li>
       <li>
-        <p>This artist works like he farts. Everything he ecreates is expensive. What's your reaction?</p>
-        <button class="img"><img src="http://i.giphy.com/1KoN1DMBnCMWk.gif"></button>
-        <button class="img"><img src="http://i.giphy.com/xUySTtRRVTN2e1E1ZC.gif"></button>
-        <button class="img"><img src="http://i.giphy.com/RkZqtCBhVh17y.gif"></button>
+        <p>How about these three?</p>
+        <button class="img"><img height="200" src="./larix/figuratief-kleur.jpg"></button>
+        <button class="img"><img height="200" src="./larix/geo-2.jpg"></button>
+        <button class="img"><img height="200" src="./larix/rauw-foto.jpg"></button>
+      </li>
+      <li>
+        <p>And these?</p>
+        <button class="img"><img height="200" src="./larix/figuratief-zw.jpg"></button>
+        <button class="img"><img height="200" src="./larix/geo-detail.jpg"></button>
+        <button class="img"><img height="200" src="./larix/rauw-schilder.jpg"></button>
       </li>
       <li>
         <p>Do you agree with this?</p>
-        <p>IMAGE OF A SEGWAY</p>
+        <p><img src="./larix/segway.png" height="400"></p>
         <button>No</button>
         <button>Not at all</button>
         <button>Absolutely not</button>
       </li>
       <li>
-        <p>Do you agree with this?</p>
-        <p>IMAGE OF CROCS</p>
-        <button>Yes</button>
-        <button>No</button>
+        <p>How does this make you feel?</p>
+        <p><img src="./larix/crocs.jpg" height="400"></p>
+        <button class="img"><img height="200" src="http://i.giphy.com/1KoN1DMBnCMWk.gif"></button>
+        <button class="img"><img height="200" src="http://i.giphy.com/3oz8xViyweSpykSoBq.gif"></button>
       </li>
       <li>
-        <p>What does this look like to you?</p>
-        <p>IMAGE OF RORSCHACH TEST</p>
-        <button>Little effort, great result!</button>
-        <button>I see a person filling in a questionaire, having bad feelings about the result</button>
+        <p>What do you think about this piece of art?</p>
+        <p><img src="./larix/rorschach.jpg" height="400"></p>
+        <button>Wow! Little effort, great result!</button>
+        <button>This isn't art! It's a Rorschach test. Go fool someone else!</button>
       </li>
       <li>
         <p>How do you see people</p>
@@ -196,7 +211,15 @@
         <button>COLOR</button>
       </li>
       <li>
-        <p>Dit zijn volgens mij leuke collecties voor je</p>
+        <p>Okay, that's enough.</p>
+      </li>
+      <li>
+        <p>Let me find some collections of art you will like.</p>
+      </li>
+      <li>
+        <p>How about these...</p>
+      </li>
+      <li>
         <p>
           <a v-bind:href="'/collection.html#' + database.collections[0].id" target="_blank">
             {{ database.collections[0].title }}
@@ -213,20 +236,16 @@
 
   <script src="database.js"></script>
   <script>
-    var backgrounds = [
-      null,
-      'http://i.giphy.com/nXolxB21CRyAE.gif',
-    ]
     new Vue({
       el: '#app',
       data: {
         database: database,
-      }
+      },
     });
     var currentQuestion = -1;
     var $questions = $('#questions > li');
     var backgroundTimeout;
-    // $questions.hide();
+    $questions.hide();
     function showNextQuestion() {
       if (this) {
         $(this).addClass('active');
@@ -237,15 +256,13 @@
       currentQuestion++;
       var $currentQuestion = $questions.eq(currentQuestion);
       $currentQuestion.show();
-      $currentQuestion.find('button').on('click', showNextQuestion);
-      window.scrollTo(0, document.body.scrollHeight);
 
-      var wallpaper = backgrounds[currentQuestion] ? 'url(' + backgrounds[currentQuestion] + ')' : 'none';
-      $('#wallpaper').css('background-image', wallpaper);
-      clearTimeout(backgroundTimeout);
-      setTimeout(() => {
-        $('#wallpaper').css('background-image', 'none');
-      }, 5000);
+      var $buttons = $currentQuestion.find('button');
+      if (!$buttons.length) {
+        setTimeout(showNextQuestion, 2000);
+      }
+      $buttons.on('click', showNextQuestion);
+      window.scrollTo(0, document.body.scrollHeight);
     }
     showNextQuestion();
   </script>
