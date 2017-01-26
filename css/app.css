@@ -18,7 +18,9 @@
 
 body {
   font-family: "Apercu";
-  color: #1C51FF;
+  font-size: 14px;
+  line-height: 1.4285714286;
+  color: black;
   background-color: white;
   letter-spacing: normal;
   -webkit-font-smoothing: antialiased;
@@ -26,6 +28,13 @@ body {
 
 .row {
   margin-bottom: 40px;
+}
+
+.row.break {
+  margin-top: 5px;
+  padding: 40px 0 30px;
+  border-top: 1px solid #E1E1E1;
+  border-bottom: 1px solid #E1E1E1;
 }
 
 h1, h2, h3, h4, h5 {
@@ -38,8 +47,16 @@ a {
   text-decoration: none;
 }
 
+.blue {
+  color: #1C51FF;
+}
+
 .grey {
   color: #9d9d9d;
+}
+
+.grey-light {
+  color: #E1E1E1;
 }
 
 .no-margin {
@@ -55,10 +72,10 @@ hr {
 nav#nav-main {
   height: 60px;
   padding: 20px 30px;
-  background-color: white;
+  color: #1C51FF;
 }
 
-nav#nav-main #link-home {
+nav#nav-main .link-home {
   float: left;
   width: 200px;
 }
@@ -83,18 +100,33 @@ nav#nav-main ul.right {
   margin-right: 30px;
 }
 
+.link-home img {
+  width: 190px;
+}
+
 nav #link-guide {
-  padding: 0 20px;
+  padding: 0 10px 3px;
   border-radius: 20px;
   background-color: #1C51FF;
 }
 
-nav #link-home img {
-  width: 190px;
-}
-
 nav #link-guide a {
   color: white;
+}
+
+/* Footer */
+footer {
+  height: 30px;
+  margin: 20px 30px 0 30px;
+  padding: 20px 30px 10px;
+  border-top: 1px solid #E1E1E1;
+}
+footer .link-home {
+  float: left;
+}
+.footer-links img {
+  float: right;
+  width: 335px;
 }
 
 #home-header {
@@ -113,10 +145,9 @@ nav #link-guide a {
   padding-top: 40px;
 }
 
-.collection, .artist {
+.collection, .artwork, .artist {
   position: relative;
   height: 400px;
-  background-color: rgb(119, 252, 161);
   background-size: cover;
 }
 
@@ -127,6 +158,10 @@ nav #link-guide a {
   background-color: white;
 }
 
+.four.columns .label {
+  width: 100%;
+}
+
 .artist .label {
   padding-left: 20px;
   background-color: transparent;
@@ -135,6 +170,11 @@ nav #link-guide a {
 
 .artist h2, .artist h3, .artist h4 {
   color: white !important;
+}
+
+.artwork img {
+  width: 100%;
+  height: auto;
 }
 
 .label h2 {
@@ -153,6 +193,40 @@ nav #link-guide a {
   color: #9d9d9d;
 }
 
+.caption {
+  margin-top: 5px;
+}
+
+.caption .date {
+  color: #9d9d9d;
+}
+
+.caption .price {
+  color: #9d9d9d;
+}
+
+.caption .title {
+  color: #1C51FF;
+}
+
+.blog .image {
+  height: 180px;
+  background-size: cover;
+}
+
 #block-guide img {
-  width: 355px;
+  width: 346px;
+}
+
+#block-guide-centered {
+  display: block;
+  text-align: center;
+}
+
+#block-guide-centered img {
+  width: 429px;
+}
+
+#block-newsletter img {
+  width: 255px;
 }

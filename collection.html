@@ -1,21 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>Collection - Patty Morgan</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/skeleton.css">
+  <link rel="stylesheet" href="./css/ss-standard.css">
+  <link rel="stylesheet" href="./css/app.css">
   <script src="./vue.js"></script>
 </head>
 <body>
-  <div id="app">
-    <a href="index.html">home</a>
-    <h1>{{ currentCollection.title }}</h1>
-    <ol>
-      <li v-for="work in currentCollection.works">
-        <a v-bind:href="'/work.html#' + currentCollection.id + '-' + work.id">
-          {{ work.title }}
-          ({{ work.artist }})
+  <div id="app" class="collection-page">
+    <nav id="nav-main">
+      <div class="link-home">
+        <a href="/index.html">
+          <img src="/assets/logo.png"/>
         </a>
-      </li>
-    </ol>
+      </div>
+      <ul>
+        <li id="link-art">art</li>
+        <li id="link-artists">artists</li>
+        <li id="link-blog">blog</li>
+        <li id="link-guide"><a href="guide.html">assistant</a></li>
+      </ul>
+      <ul class="right">
+        <li id="link-search" class="ss-icon">search</li>
+        <li id="link-user">Sign up / Login</li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="eight columns collection">
+          <h1>{{ currentCollection.title }}</h1>
+          <p>{{ currentCollection.description }}</p>
+        </div>
+      </div>
+      <ul>
+        <li v-for="work in currentCollection.works">
+          <a v-bind:href="'/work.html#' + currentCollection.id + '-' + work.id">
+            {{ work.title }}
+            ({{ work.artist }})
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <script src="database.js"></script>

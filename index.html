@@ -10,9 +10,9 @@
   <script src="./vue.js"></script>
 </head>
 <body>
-  <div id="app">
+  <div id="app" class="home-page">
     <nav id="nav-main">
-      <div id="link-home">
+      <div class="link-home">
         <a href="/index.html">
           <img src="/assets/logo.png"/>
         </a>
@@ -21,7 +21,7 @@
         <li id="link-art">art</li>
         <li id="link-artists">artists</li>
         <li id="link-blog">blog</li>
-        <li id="link-guide"><a href="guide.html">hello?</a></li>
+        <li id="link-guide"><a href="guide.html">assistant</a></li>
       </ul>
       <ul class="right">
         <li id="link-search" class="ss-icon">search</li>
@@ -29,9 +29,10 @@
       </ul>
     </nav>
     <div class="container">
+
       <div class="row">
         <div id="home-header" class="">
-          <p>
+          <p class="blue">
             patty loves art.
           </p>
           <h1>
@@ -59,9 +60,10 @@
           </div>
         </div>
       </div>
+
       <div class="row">
         <a id="block-guide" class="four columns image" href="guide.html">
-          <img src="/assets/guide-block.png"/>
+          <img src="/assets/block-guide.png"/>
         </a>
         <a class="four columns collection" :href="'/collection.html#' + database.collections[1].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
           <div class="label">
@@ -86,24 +88,119 @@
           </div>
         </a>
       </div>
-      <div class="row break">
+
+      <div class="row no-margin">
         <p class="grey no-margin">
           what’s happening on patty morgan?
           <a href="">visit our blog</a>
         </p>
-        <hr/>
       </div>
-      <div class="row">
+      <div class="row break">
         <div class="three columns blog">
           <div class="image" style="background-image:url('/assets/blog1.jpg')"></div>
-          <div class="label">
+          <div class="caption">
             <div class="date">January 25th</div>
             <div class="title">A boook by Liza Wolters</div>
           </div>
         </div>
+        <div class="three columns blog">
+          <div class="image" style="background-image:url('/assets/blog2.jpg')"></div>
+          <div class="caption">
+            <div class="date">January 18th</div>
+            <div class="title">Acts of Art Aukje Dekker – One for all, all for one.</div>
+          </div>
+        </div>
+        <div class="three columns blog">
+          <div class="image" style="background-image:url('/assets/blog3.jpg')"></div>
+          <div class="caption">
+            <div class="date">January 11th</div>
+            <div class="title">Who's this guy? It's Koen Taselaar!</div>
+          </div>
+        </div>
+        <div id="block-newsletter" class="three columns">
+          <img src="/assets/block-newsletter.png"/>
+        </div>
       </div>
 
       <div class="row">
+        <div class="four columns artist" style="background-image:url('/assets/bart.jpg')">
+          <div class="label">
+            <h4>artist highlight</h4>
+            <h2>Meet Bart Eysink Smeets</h2>
+            <h3>Cross-platform mattis consectetur purus sit amet.</h3>
+          </div>
+        </div>
+        <a class="four columns collection" :href="'/collection.html#' + database.collections[3].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+          <div class="label">
+            <h4>collection</h4>
+            <h2>
+              {{ database.collections[3].title }}
+            </h2>
+            <h3>
+              {{ database.collections[3].short }}
+            </h3>
+          </div>
+        </a>
+        <a class="four columns collection" :href="'/collection.html#' + database.collections[4].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+          <div class="label">
+            <h4>collection</h4>
+            <h2>
+              {{ database.collections[4].title }}
+            </h2>
+            <h3>
+              {{ database.collections[4].short }}
+            </h3>
+          </div>
+        </a>
+      </div>
+
+      <div class="row">
+        <a class="four columns artwork" :href="'/work.html#' + database.collections[3].id + '-' + database.collections[3].works[0].id" style="background-image:url('http://www.designsponge.com/wp-content/uploads/2016/02/125-350x350.jpg')">
+          <div class="label">
+            <h4>artwork</h4>
+            <h2>
+              {{ database.collections[3].works[0].artist }}
+            </h2>
+            <h3>
+              {{ database.collections[3].works[0].title }}
+            </h3>
+          </div>
+        </a>
+        <a class="eight columns collection" :href="'/collection.html#' + database.collections[4].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+          <div class="label">
+            <h4>collection</h4>
+            <h2>
+              {{ database.collections[4].title }}
+            </h2>
+            <h3>
+              {{ database.collections[4].short }}
+            </h3>
+          </div>
+        </a>
+      </div>
+
+      <div class="row no-margin">
+        <p class="grey no-margin">
+          patty&rsquo;s art picks
+          <a href="">view all art</a>
+        </p>
+      </div>
+      <div class="row break">
+        <a class="three columns artwork" v-for="collection in database.collections.slice(0, 4)" v-bind:href="'/work.html#' + collection.id + '-1'">
+          <img :src="'/assets/works/' + collection.id + '-1.jpg'"/>
+          <div class="caption">
+            <div class="price">€{{ collection.works[0].price }}</div>
+            <div class="title">{{ collection.works[0].title }}</div>
+          </div>
+        </a>
+      </div>
+      <div class="row">
+        <a href="guide.html" id="block-guide-centered">
+          <img src="/assets/block-guide-centered.png"/>
+        </a>
+      </div>
+
+      <!-- <div class="row">
         <ul>
           <li v-for="collection in database.collections">
             <a v-bind:href="'/collection.html#' + collection.id">
@@ -111,10 +208,20 @@
             </a>
           </li>
         </ul>
-        <a href="guide.html">GUIDE</a>
-      </div>      
+      </div> -->
     </div>
   </div>
+
+  <footer>
+    <div class="link-home">
+      <a href="/index.html">
+        <img src="/assets/logo.png"/>
+      </a>
+    </div>
+    <div class="footer-links">
+      <img src="/assets/footer-links.png"/>
+    </div>
+  </footer>
 
   <script src="database.js"></script>
   <script>
