@@ -19,6 +19,38 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/assets\/bart.jpg": {
+		"ft": 16384,
+		"iS": 91510,
+		"oA": 0,
+		"oAP": "\/assets\/bart.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/blog1.jpg": {
+		"ft": 16384,
+		"iS": 33461,
+		"oA": 0,
+		"oAP": "\/assets\/blog1.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/guide-block.png": {
+		"ft": 32768,
+		"iS": 120711,
+		"oA": 0,
+		"oAP": "\/assets\/guide-block.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/logo.png": {
+		"ft": 32768,
+		"iS": 20795,
+		"oA": 0,
+		"oAP": "\/assets\/logo.png",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/collection.html": {
 		"ft": 8192,
 		"oA": 2,
@@ -144,11 +176,11 @@
 		},
 	"\/database.js": {
 		"ft": 64,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/database-min.js",
-		"oF": 0,
-		"sC": 1,
+		"oF": 1,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/guide.html": {
