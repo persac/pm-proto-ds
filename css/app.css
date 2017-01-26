@@ -151,6 +151,10 @@ footer .link-home {
   background-size: cover;
 }
 
+.height-auto {
+  height: auto;
+}
+
 .label {
   position: absolute;
   bottom: 0;

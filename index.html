@@ -186,7 +186,7 @@
         </p>
       </div>
       <div class="row break">
-        <a class="three columns artwork" v-for="collection in database.collections.slice(0, 4)" v-bind:href="'/work.html#' + collection.id + '-1'">
+        <a class="three columns artwork height-auto" v-for="collection in database.collections.slice(0, 4)" v-bind:href="'/work.html#' + collection.id + '-1'">
           <img :src="'/assets/works/' + collection.id + '-1.jpg'"/>
           <div class="caption">
             <div class="price">€{{ collection.works[0].price }}</div>
