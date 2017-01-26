@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./css/ss-standard.css">
   <link rel="stylesheet" href="./css/app.css">
   <script src="./vue.js"></script>
+  <script src="./jquery.js"></script>
 </head>
 <body>
   <div id="app" class="collection-page">
@@ -31,20 +32,98 @@
 
     <div class="container">
       <div class="row">
-        <div class="eight columns collection">
+        <div class="eight columns collection-header">
           <h1>{{ currentCollection.title }}</h1>
           <p>{{ currentCollection.description }}</p>
         </div>
-      </div>
-      <ul>
-        <li v-for="work in currentCollection.works">
-          <a v-bind:href="'/work.html#' + currentCollection.id + '-' + work.id">
-            {{ work.title }}
-            ({{ work.artist }})
+        <div class="four columns collection-work" v-for="work in currentCollection.works.slice(0,1)">
+          <a class="image" v-bind:href="'/work.html#' + currentCollection.id + '-' + work.id">
+            <img :src="'/assets/works/' + currentCollection.id + '-' + work.id + '.jpg'"/>
           </a>
-        </li>
-      </ul>
+          <span class="title">{{ work.title }}</span>
+          <br/>
+          <a href="" class="link-artist">{{ work.artist }}</a>
+          <br/>
+          <a v-bind:href="'/work.html#' + currentCollection.id + '-' + work.id" class="price">€{{ work.price }}</a>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid-item" v-for="work in currentCollection.works.slice(1,20)">
+          <div class="collection-work">
+            <a class="image" v-bind:href="'/work.html#' + currentCollection.id + '-' + work.id">
+              <img :src="'/assets/works/' + currentCollection.id + '-' + work.id + '.jpg'"/>
+            </a>
+            <span class="title">{{ work.title }}</span>
+            <br/>
+            <a href="" class="link-artist">{{ work.artist }}</a>
+            <br/>
+            <a v-bind:href="'/work.html#' + currentCollection.id + '-' + work.id" class="price">€{{ work.price }}</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row no-margin">
+        <p class="grey no-margin">
+          some other collections you might like
+          <a href="">see all</a>
+        </p>
+      </div>
+      <div class="row break">
+        <a class="four columns collection" :href="'/collection.html#' + database.collections[1].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+          <div class="label">
+            <h4>collection</h4>
+            <h2>
+              {{ database.collections[1].title }}
+            </h2>
+            <h3>
+              {{ database.collections[1].short }}
+            </h3>
+          </div>
+        </a>
+        <a class="four columns collection" :href="'/collection.html#' + database.collections[2].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+          <div class="label">
+            <h4>collection</h4>
+            <h2>
+              {{ database.collections[2].title }}
+            </h2>
+            <h3>
+              {{ database.collections[2].short }}
+            </h3>
+          </div>
+        </a>
+        <a class="four columns collection" :href="'/collection.html#' + database.collections[3].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+          <div class="label">
+            <h4>collection</h4>
+            <h2>
+              {{ database.collections[3].title }}
+            </h2>
+            <h3>
+              {{ database.collections[3].short }}
+            </h3>
+          </div>
+        </a>
+      </div>
+
+      <div class="row">
+        <a href="guide.html" id="block-guide-centered">
+          <img src="/assets/block-guide-centered.png"/>
+        </a>
+      </div>
+
     </div>
+
+    <footer>
+      <div class="link-home">
+        <a href="/index.html">
+          <img src="/assets/logo.png"/>
+        </a>
+      </div>
+      <div class="footer-links">
+        <img src="/assets/footer-links.png"/>
+      </div>
+    </footer>
+
   </div>
 
   <script src="database.js"></script>
@@ -63,5 +142,8 @@
       }
     });
   </script>
+  <script src="./js/masonry.pkgd.min.js"></script>
+  <script src="./js/imagesloaded.pkgd.min.js"></script>
+  <script src="./js/collection.js"></script>
 </body>
 </html>

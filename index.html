@@ -24,7 +24,7 @@
         <li id="link-guide"><a href="guide.html">assistant</a></li>
       </ul>
       <ul class="right">
-        <li id="link-search" class="ss-icon">search</li>
+        <li id="link-search"><span class="ss-icon">search</span></li>
         <li id="link-user">Sign up / Login</li>
       </ul>
     </nav>
@@ -155,25 +155,25 @@
       </div>
 
       <div class="row">
-        <a class="four columns artwork" :href="'/work.html#' + database.collections[3].id + '-' + database.collections[3].works[0].id" style="background-image:url('http://www.designsponge.com/wp-content/uploads/2016/02/125-350x350.jpg')">
+        <a class="four columns artwork" :href="'/work.html#' + database.collections[1].id + '-' + database.collections[1].works[0].id" style="background-image:url('http://www.designsponge.com/wp-content/uploads/2016/02/125-350x350.jpg')">
           <div class="label">
             <h4>artwork</h4>
             <h2>
-              {{ database.collections[3].works[0].artist }}
+              {{ database.collections[1].works[0].artist }}
             </h2>
             <h3>
-              {{ database.collections[3].works[0].title }}
+              {{ database.collections[1].works[0].title }}
             </h3>
           </div>
         </a>
-        <a class="eight columns collection" :href="'/collection.html#' + database.collections[4].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+        <a class="eight columns collection" :href="'/collection.html#' + database.collections[5].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
           <div class="label">
             <h4>collection</h4>
             <h2>
-              {{ database.collections[4].title }}
+              {{ database.collections[5].title }}
             </h2>
             <h3>
-              {{ database.collections[4].short }}
+              {{ database.collections[5].short }}
             </h3>
           </div>
         </a>

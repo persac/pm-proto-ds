@@ -91,6 +91,9 @@ nav #link-guide {
 nav #link-guide a {
   color: white; }
 
+.ss-icon {
+  vertical-align: -2px; }
+
 /* Footer */
 footer {
   height: 30px;
@@ -105,6 +108,7 @@ footer .link-home {
   float: right;
   width: 335px; }
 
+/* Home page */
 #home-header {
   width: 600px;
   margin: 0 auto;
@@ -163,10 +167,10 @@ footer .link-home {
 .caption {
   margin-top: 5px; }
 
-.caption .date {
+.date {
   color: #9d9d9d; }
 
-.caption .price {
+.price {
   color: #9d9d9d; }
 
 .caption .title {
@@ -177,14 +181,50 @@ footer .link-home {
   background-size: cover; }
 
 #block-guide img {
-  width: 346px; }
+  width: 382px; }
 
 #block-guide-centered {
   display: block;
   text-align: center; }
 
 #block-guide-centered img {
-  width: 429px; }
+  width: 417px; }
 
 #block-newsletter img {
   width: 255px; }
+
+/* Collection page */
+.collection-header h1 {
+  color: black;
+  font-size: 68px; }
+
+.collection-header p {
+  padding: 0 25% 0 12.5%;
+  font-size: 16px; }
+
+.columns.collection-work {
+  margin: 0; }
+
+.columns.collection-work .image img {
+  width: 100%; }
+
+/* Collection Masonry */
+.grid-item {
+  width: 50%; }
+
+.collection-work {
+  margin: 80px 50px; }
+
+.grid :nth-child(2) {
+  margin-top: 80px; }
+
+.image {
+  display: block; }
+
+.image img {
+  width: 100%;
+  height: auto; }
+
+/* Work page */
+.work-image img {
+  width: 100%; }

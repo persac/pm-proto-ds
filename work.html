@@ -1,18 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Homepage - Patty Morgan</title>
+  <meta charset="UTF-8">
+  <title>Work - Patty Morgan</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/skeleton.css">
+  <link rel="stylesheet" href="./css/ss-standard.css">
+  <link rel="stylesheet" href="./css/app.css">
   <script src="./vue.js"></script>
+  <script src="./jquery.js"></script>
 </head>
 <body>
-  <div id="app">
-    <a href="index.html">home</a>
+  <div id="app" class="work-page">
+    <nav id="nav-main">
+      <div class="link-home">
+        <a href="/index.html">
+          <img src="/assets/logo.png"/>
+        </a>
+      </div>
+      <ul>
+        <li id="link-art">art</li>
+        <li id="link-artists">artists</li>
+        <li id="link-blog">blog</li>
+        <li id="link-guide"><a href="guide.html">assistant</a></li>
+      </ul>
+      <ul class="right">
+        <li id="link-search" class="ss-icon">search</li>
+        <li id="link-user">Sign up / Login</li>
+      </ul>
+    </nav>
 
-    <h1>{{ currentWork.title }}</h1>
-    <h2>{{ currentWork.artist }}</h2>
+    <div class="container">
+      <div class="row">
+        <div class="six columns work-image">
+          <img :src="'/assets/works/' + currentCollection.id + '-' + currentWork.id + '.jpg'"/>
+        </div>
+
+        <div class="six columns work-header">
+          <h1>{{ currentWork.title }}</h1>
+          <h2>{{ currentWork.artist }}</h2>
+          <div class="action-panel">
+            <p class="price">€{{ currentWork.price }}</p>
+            <ul>
+              <li>Price includes 6% sales tax and a certificate of authenticity.
+Usually shipping is included. Exceptions may occur (if we need to use helicopter for instance) – in which case we will contact you.</li>
+              <li>Find information on payment, shipping and returns in our FAQ.</li>
+            </ul>
+            <button>Buy this work</button>
+            <button>Try this work</button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row no-margin">
+        <p class="grey no-margin">
+          also seen in these collections
+          <a href="">see all</a>
+        </p>
+      </div>
+      <div class="row break">
+        <a class="four columns collection" :href="'/collection.html#' + database.collections[4].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+          <div class="label">
+            <h4>collection</h4>
+            <h2>
+              {{ database.collections[4].title }}
+            </h2>
+            <h3>
+              {{ database.collections[4].short }}
+            </h3>
+          </div>
+        </a>
+        <a class="four columns collection" :href="'/collection.html#' + database.collections[5].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+          <div class="label">
+            <h4>collection</h4>
+            <h2>
+              {{ database.collections[5].title }}
+            </h2>
+            <h3>
+              {{ database.collections[5].short }}
+            </h3>
+          </div>
+        </a>
+        <a class="four columns collection" :href="'/collection.html#' + database.collections[2].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+          <div class="label">
+            <h4>collection</h4>
+            <h2>
+              {{ database.collections[2].title }}
+            </h2>
+            <h3>
+              {{ database.collections[2].short }}
+            </h3>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
 
     <h3>In Collectie</h3>
     <a v-bind:href="'/collection.html#' + currentCollection.id">{{ currentCollection.title }}</a>
+
+    <footer>
+      <div class="link-home">
+        <a href="/index.html">
+          <img src="/assets/logo.png"/>
+        </a>
+      </div>
+      <div class="footer-links">
+        <img src="/assets/footer-links.png"/>
+      </div>
+    </footer>
+
   </div>
 
   <script src="database.js"></script>
