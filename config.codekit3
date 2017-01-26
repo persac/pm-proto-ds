@@ -45,7 +45,7 @@
 		},
 	"\/assets\/logo.png": {
 		"ft": 32768,
-		"iS": 20795,
+		"iS": 5209,
 		"oA": 0,
 		"oAP": "\/assets\/logo.png",
 		"oF": 0,
@@ -194,6 +194,199 @@
 		"oA": 2,
 		"oAP": "\/index.html",
 		"oF": 0
+		},
+	"\/jquery.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/jquery-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/larix\/crocs.jpg": {
+		"ft": 16384,
+		"iS": 305786,
+		"oA": 0,
+		"oAP": "\/larix\/crocs.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/ext-1.jpg": {
+		"ft": 16384,
+		"iS": 467756,
+		"oA": 0,
+		"oAP": "\/larix\/ext-1.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/ext-2.jpg": {
+		"ft": 16384,
+		"iS": 337945,
+		"oA": 0,
+		"oAP": "\/larix\/ext-2.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/ext-3.jpg": {
+		"ft": 16384,
+		"iS": 326553,
+		"oA": 0,
+		"oAP": "\/larix\/ext-3.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/figuartief-midtone.jpg": {
+		"ft": 16384,
+		"iS": 47282,
+		"oA": 0,
+		"oAP": "\/larix\/figuartief-midtone.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/figuratief-kleur.jpg": {
+		"ft": 16384,
+		"iS": 118833,
+		"oA": 0,
+		"oAP": "\/larix\/figuratief-kleur.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/figuratief-zw.jpg": {
+		"ft": 16384,
+		"iS": 59471,
+		"oA": 0,
+		"oAP": "\/larix\/figuratief-zw.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/geo-1.jpg": {
+		"ft": 16384,
+		"iS": 140985,
+		"oA": 0,
+		"oAP": "\/larix\/geo-1.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/geo-2.jpg": {
+		"ft": 16384,
+		"iS": 27011,
+		"oA": 0,
+		"oAP": "\/larix\/geo-2.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/geo-detail.jpg": {
+		"ft": 16384,
+		"iS": 256935,
+		"oA": 0,
+		"oAP": "\/larix\/geo-detail.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/int-1.jpg": {
+		"ft": 16384,
+		"iS": 88247,
+		"oA": 0,
+		"oAP": "\/larix\/int-1.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/int-2.jpg": {
+		"ft": 16384,
+		"iS": 216566,
+		"oA": 0,
+		"oAP": "\/larix\/int-2.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/int-3.jpg": {
+		"ft": 16384,
+		"iS": 501362,
+		"oA": 0,
+		"oAP": "\/larix\/int-3.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/int-4.jpg": {
+		"ft": 16384,
+		"iS": 85937,
+		"oA": 0,
+		"oAP": "\/larix\/int-4.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/kubus-1.png": {
+		"ft": 32768,
+		"iS": 77107,
+		"oA": 0,
+		"oAP": "\/larix\/kubus-1.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/kubus-2.png": {
+		"ft": 32768,
+		"iS": 19632,
+		"oA": 0,
+		"oAP": "\/larix\/kubus-2.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/kubus-3.png": {
+		"ft": 32768,
+		"iS": 24241,
+		"oA": 0,
+		"oAP": "\/larix\/kubus-3.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/kubus-4.png": {
+		"ft": 32768,
+		"iS": 18660,
+		"oA": 0,
+		"oAP": "\/larix\/kubus-4.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/rauw-concept.jpg": {
+		"ft": 16384,
+		"iS": 25676,
+		"oA": 0,
+		"oAP": "\/larix\/rauw-concept.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/rauw-foto.jpg": {
+		"ft": 16384,
+		"iS": 24736,
+		"oA": 0,
+		"oAP": "\/larix\/rauw-foto.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/rauw-schilder.jpg": {
+		"ft": 16384,
+		"iS": 100539,
+		"oA": 0,
+		"oAP": "\/larix\/rauw-schilder.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/rorschach.jpg": {
+		"ft": 16384,
+		"iS": 243164,
+		"oA": 0,
+		"oAP": "\/larix\/rorschach.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/larix\/segway.png": {
+		"ft": 32768,
+		"iS": 214363,
+		"oA": 0,
+		"oAP": "\/larix\/segway.png",
+		"oF": 0,
+		"opt": 0
 		},
 	"\/vue.js": {
 		"ft": 64,
