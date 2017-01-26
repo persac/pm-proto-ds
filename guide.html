@@ -3,30 +3,251 @@
 <head>
   <title>Guide - Patty Morgan</title>
   <script src="./vue.js"></script>
+  <script src="./jquery.js"></script>
+  <style>
+    #wallpaper {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: red;
+      z-index: 0;
+      background: #1c51ff;
+      opacity: 0.2;
+      background-blend-mode: multiply;
+    }
+    html {
+      height: 100%;
+    }
+    body {
+      font-family: sans-serif;
+      margin: 150px;
+      background: #1c51ff;
+      color: white;
+    }
+    #questions {
+      position: relative;
+      z-index: 1;
+      font-size: 24px;
+    }
+    #questions button {
+      border-radius: 40px;
+      border: none;
+      cursor: pointer;
+      padding: 8px 36px;
+      margin: 10px 10px 10px 0;
+      font-size: 24px;
+      background: white;
+      color: #1c51ff;
+      outline: none;
+    }
+    #questions button:hover {
+      background: #87f6d8
+    }
+    #questions .done button {
+      display: none !important;
+    }
+    #questions .done button.active {
+      background: #87f6d8;
+      display: inline-block !important;
+    }
+    #questions button.img {
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+    }
+    #questions button.img:hover img {
+      opacity: 0.5;
+    }
+
+    #questions {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
   <div id="app">
-    <a href="index.html">home</a>
-    <h1>GUIDE</h1>
-    <p>BLABLA HEEL VEEL STAPPEN EN GEKKIGHEID</p>
-    <h2>Suggesties</h2>
-    <ul>
-      <li v-for="collection, index in database.collections">
-        <a v-bind:href="'/collection.html#' + collection.id">
-          {{ collection.title }}
-        </a>
+    <ol id="questions">
+      <li>
+        <p>Hi I'm Patty!</p>
+        <button>Hi!</button>
       </li>
-    </ul>
+      <li>
+        <p>I'm here to try and help you discover art you like.</p>
+        <p>Let's talk.</p>
+        <p>How is life?</p>
+        <button class="img"><img src="http://i.giphy.com/3o7TKyZo07qCddZWlW.gif"></button>
+        <button class="img"><img src="https://media.giphy.com/media/WoJWstkF4mRlC/source.gif"></button>
+      </li>
+      <li>
+        <p>Tell me something about yourself...</p>
+        <button>I am centered. I am balanced. I am at peace.</button>
+        <button>I think chewing gum can make your brain think more efficiently.</button>
+      </li>
+      <li>
+        <p>Oh. I see. You're one of those people. Never mind.</p>
+        <p>How would you solve this?</p>
+        <p><img width="200" src="./larix/kubus-1.png"></p>
+        <button class="img"><img width="120" src="./larix/kubus-2.png"></button>
+        <button class="img"><img width="120" src="./larix/kubus-3.png"></button>
+        <button class="img"><img width="120" src="./larix/kubus-4.png"></button>
+      </li>
+      <li>
+        <p>What's your house like?</p>
+        <button>Great interior, small family photo</button>
+        <button>Crappy house, great art</button>
+      </li>
+      <li>
+        <button>Monument</button>
+        <button>Fabriek</button>
+        <button>Flat</button>
+        <button>Klein huis</button>
+      </li>
+      <li>
+        <p>This artist made this conceptual artwork</p>
+        <button>Cool!</button>
+        <button>Who cares!??</button>
+      </li>
+      <li>
+        <p>Which work do you like most?</p>
+        <button>Shaped</button>
+        <button>Detailed</button>
+        <button>Abstract</button>
+      </li>
+      <li>
+        <button>Detailed</button>
+        <button>Shaped</button>
+        <button>Abstract</button>
+      </li>
+      <li>
+        <button>Abstract</button>
+        <button>Shaped</button>
+        <button>Detailed</button>
+      </li>
+      <li>
+        <p>This artist spends a lot of time to create an artwork</p>
+        <button>I don't mind</button>
+        <button>Love it!</button>
+      </li>
+      <li>
+        <p>This artist works like he farts. Everything he ecreates is expensive. What's your reaction?</p>
+        <button class="img"><img src="http://i.giphy.com/1KoN1DMBnCMWk.gif"></button>
+        <button class="img"><img src="http://i.giphy.com/xUySTtRRVTN2e1E1ZC.gif"></button>
+        <button class="img"><img src="http://i.giphy.com/RkZqtCBhVh17y.gif"></button>
+      </li>
+      <li>
+        <p>Do you agree with this?</p>
+        <p>IMAGE OF A SEGWAY</p>
+        <button>No</button>
+        <button>Not at all</button>
+        <button>Absolutely not</button>
+      </li>
+      <li>
+        <p>Do you agree with this?</p>
+        <p>IMAGE OF CROCS</p>
+        <button>Yes</button>
+        <button>No</button>
+      </li>
+      <li>
+        <p>What does this look like to you?</p>
+        <p>IMAGE OF RORSCHACH TEST</p>
+        <button>Little effort, great result!</button>
+        <button>I see a person filling in a questionaire, having bad feelings about the result</button>
+      </li>
+      <li>
+        <p>How do you see people</p>
+        <button>RUBENS WERK MET MENSEN</button>
+        <button>BLACK FRIDAY NARIGHEID</button>
+      </li>
+      <li>
+        <p>When you buy something for your house it better be...</p>
+        <button>Unique</button>
+        <button>Splendid</button>
+        <button>Soft</button>
+        <button>Colored</button>
+        <button>DARK!</button>
+      </li>
+      <li>
+        <p>Pick one!</p>
+        <button>COLOR</button>
+        <button>COLOR</button>
+        <button>COLOR</button>
+        <button>COLOR</button>
+        <button>COLOR</button>
+        <button>COLOR</button>
+        <button>COLOR</button>
+        <button>COLOR</button>
+        <button>COLOR</button>
+      </li>
+      <li>
+        <p>When you go dancing, what does it look like</p>
+        <button>COLOR</button>
+        <button>COLOR</button>
+        <button>COLOR</button>
+        <button>COLOR</button>
+        <button>COLOR</button>
+        <button>COLOR</button>
+        <button>COLOR</button>
+        <button>COLOR</button>
+        <button>COLOR</button>
+      </li>
+      <li>
+        <p>Dit zijn volgens mij leuke collecties voor je</p>
+        <p>
+          <a v-bind:href="'/collection.html#' + database.collections[0].id" target="_blank">
+            {{ database.collections[0].title }}
+          </a>
+          <br>
+          <a v-bind:href="'/collection.html#' + database.collections[1].id" target="_blank">
+            {{ database.collections[1].title }}
+          </a>
+        </p>
+      </li>
+    </ol>
+    <div id="wallpaper"></div>
   </div>
 
   <script src="database.js"></script>
   <script>
+    var backgrounds = [
+      null,
+      'http://i.giphy.com/nXolxB21CRyAE.gif',
+    ]
     new Vue({
       el: '#app',
       data: {
         database: database,
       }
     });
+    var currentQuestion = -1;
+    var $questions = $('#questions > li');
+    var backgroundTimeout;
+    // $questions.hide();
+    function showNextQuestion() {
+      if (this) {
+        $(this).addClass('active');
+        var $oldQuestion = $questions.eq(currentQuestion);
+        $oldQuestion.addClass('done');
+        $oldQuestion.find('button').off('click', showNextQuestion);
+      }
+      currentQuestion++;
+      var $currentQuestion = $questions.eq(currentQuestion);
+      $currentQuestion.show();
+      $currentQuestion.find('button').on('click', showNextQuestion);
+      window.scrollTo(0, document.body.scrollHeight);
+
+      var wallpaper = backgrounds[currentQuestion] ? 'url(' + backgrounds[currentQuestion] + ')' : 'none';
+      $('#wallpaper').css('background-image', wallpaper);
+      clearTimeout(backgroundTimeout);
+      setTimeout(() => {
+        $('#wallpaper').css('background-image', 'none');
+      }, 5000);
+    }
+    showNextQuestion();
   </script>
 </body>
 </html>
