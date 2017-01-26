@@ -9,12 +9,14 @@ var database = {
         {
           id: "1",
           title: 'Een slecht werk',
-          artist: 'Naam Kunstenaar'
+          artist: 'Naam Kunstenaar',
+          price: 1000
         },
         {
           id: "2",
           title: 'Een ander slecht werk',
-          artist: 'Kunstenaar Naam'
+          artist: 'Kunstenaar Naam',
+          price: 1000
         }
       ]
     },
@@ -27,12 +29,14 @@ var database = {
         {
           id: "1",
           title: 'Een goed werk',
-          descript: 'Naam Kunstenaar'
+          artist: 'Naam Kunstenaar',
+          price: 1000
         },
         {
           id: "2",
           title: 'Een ander goed werk',
-          artist: 'Kunstenaar Naam'
+          artist: 'Kunstenaar Naam',
+          price: 1000
         }
       ]
     },
@@ -45,12 +49,14 @@ var database = {
         {
           id: "1",
           title: 'Een goed werk',
-          descript: 'Naam Kunstenaar'
+          artist: 'Naam Kunstenaar',
+          price: 1000
         },
         {
           id: "2",
           title: 'Een ander goed werk',
-          artist: 'Kunstenaar Naam'
+          artist: 'Kunstenaar Naam',
+          price: 1000
         }
       ]
     },
@@ -63,12 +69,14 @@ var database = {
         {
           id: "1",
           title: 'Een goed werk',
-          descript: 'Naam Kunstenaar'
+          artist: 'Naam Kunstenaar',
+          price: 1000
         },
         {
           id: "2",
           title: 'Een ander goed werk',
-          artist: 'Kunstenaar Naam'
+          artist: 'Kunstenaar Naam',
+          price: 1000
         }
       ]
     },
@@ -81,12 +89,14 @@ var database = {
         {
           id: "1",
           title: 'Een goed werk',
-          descript: 'Naam Kunstenaar'
+          artist: 'Naam Kunstenaar',
+          price: 1000
         },
         {
           id: "2",
           title: 'Een ander goed werk',
-          artist: 'Kunstenaar Naam'
+          artist: 'Kunstenaar Naam',
+          price: 1000
         }
       ]
     }

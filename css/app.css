@@ -19,11 +19,18 @@
 body {
   font-family: "Apercu";
   color: #1C51FF;
-  background-color: rgb(231, 231, 231);
+  background-color: white;
+  letter-spacing: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+.row {
+  margin-bottom: 40px;
 }
 
 h1, h2, h3, h4, h5 {
   color: #1C51FF;
+  letter-spacing: normal;
 }
 
 a {
@@ -31,9 +38,23 @@ a {
   text-decoration: none;
 }
 
+.grey {
+  color: #9d9d9d;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+hr {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+/* Navigation */
 nav#nav-main {
-  height: 30px;
-  padding: 15px 20px;
+  height: 60px;
+  padding: 20px 30px;
   background-color: white;
 }
 
@@ -43,29 +64,95 @@ nav#nav-main #link-home {
 }
 
 nav#nav-main ul {
-  float: right;
+  width: 400px;;
+  margin: 0 auto;
   list-style: none;
-  margin: 0;
 }
 
 nav#nav-main ul li {
+  cursor: pointer;
   float: left;
   margin-left: 50px;
   margin-bottom: 0;
 }
 
+nav#nav-main ul.right {
+  position: absolute;
+  width: auto;
+  right: 0;
+  margin-right: 30px;
+}
+
+nav #link-guide {
+  padding: 0 20px;
+  border-radius: 20px;
+  background-color: #1C51FF;
+}
+
+nav #link-home img {
+  width: 190px;
+}
+
+nav #link-guide a {
+  color: white;
+}
+
+#home-header {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#home-header h1 {
+  color: black;
+  font-size: 38px;
+}
+
 .container {
   max-width: 1400px;
+  padding-top: 40px;
 }
 
-.collection {
+.collection, .artist {
   position: relative;
   height: 400px;
-  padding: 20px;
   background-color: rgb(119, 252, 161);
+  background-size: cover;
 }
 
-.collection .label {
+.label {
   position: absolute;
   bottom: 0;
+  padding: 10px 20px 20px 0;
+  background-color: white;
+}
+
+.artist .label {
+  padding-left: 20px;
+  background-color: transparent;
+  color: white !important;
+}
+
+.artist h2, .artist h3, .artist h4 {
+  color: white !important;
+}
+
+.label h2 {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.label h3, .label h4 {
+  margin-bottom: 0;
+  color: black;
+  font-size: 14px;
+}
+
+.label h4 {
+  margin-bottom: 12px;
+  color: #9d9d9d;
+}
+
+#block-guide img {
+  width: 355px;
 }
