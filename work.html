@@ -22,7 +22,7 @@
         <li id="link-art">art</li>
         <li id="link-artists">artists</li>
         <li id="link-blog">blog</li>
-        <li id="link-guide"><a href="guide.html">assistant</a></li>
+        <li id="link-guide"><a id="block-guide-top" href="guide.html"><img src="/assets/block-guide-top.gif"></a></li>
       </ul>
       <ul class="right">
         <li id="link-search" class="ss-icon">search</li>
@@ -34,6 +34,9 @@
       <div class="row">
         <div class="six columns work-image">
           <img :src="'/assets/works/' + currentCollection.id + '-' + currentWork.id + '.jpg'"/>
+          <br/>
+          <br/>
+          <a href="">Size comparison</a>
         </div>
 
         <div class="six columns work-header">
@@ -46,8 +49,13 @@
 Usually shipping is included. Exceptions may occur (if we need to use helicopter for instance) – in which case we will contact you.</li>
               <li>Find information on payment, shipping and returns in our FAQ.</li>
             </ul>
-            <button>Buy this work</button>
+            <button class="buy-button">Buy this work</button>
             <button>Try this work</button>
+            <br/>
+            <br/>
+            <a href="">Ask a question about this work</a>
+            <br/>
+            <a href="">Save this work to my wishlist</a>
           </div>
 
         </div>
@@ -61,7 +69,7 @@ Usually shipping is included. Exceptions may occur (if we need to use helicopter
         </p>
       </div>
       <div class="row break">
-        <a class="four columns collection" :href="'/collection.html#' + database.collections[4].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+        <a class="four columns collection" :href="'/collection.html#' + database.collections[4].id" :style="{backgroundImage: 'url(/assets/works/' + database.collections[4].id + '.jpg)'}">
           <div class="label">
             <h4>collection</h4>
             <h2>
@@ -72,7 +80,7 @@ Usually shipping is included. Exceptions may occur (if we need to use helicopter
             </h3>
           </div>
         </a>
-        <a class="four columns collection" :href="'/collection.html#' + database.collections[5].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+        <a class="four columns collection" :href="'/collection.html#' + database.collections[5].id" :style="{backgroundImage: 'url(/assets/works/' + database.collections[5].id + '.jpg)'}">
           <div class="label">
             <h4>collection</h4>
             <h2>
@@ -83,7 +91,7 @@ Usually shipping is included. Exceptions may occur (if we need to use helicopter
             </h3>
           </div>
         </a>
-        <a class="four columns collection" :href="'/collection.html#' + database.collections[2].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+        <a class="four columns collection" :href="'/collection.html#' + database.collections[2].id" :style="{backgroundImage: 'url(/assets/works/' + database.collections[2].id + '.jpg)'}">
           <div class="label">
             <h4>collection</h4>
             <h2>
@@ -99,8 +107,8 @@ Usually shipping is included. Exceptions may occur (if we need to use helicopter
     </div>
 
 
-    <h3>In Collectie</h3>
-    <a v-bind:href="'/collection.html#' + currentCollection.id">{{ currentCollection.title }}</a>
+    <!-- <h3>In Collectie</h3>
+    <a v-bind:href="'/collection.html#' + currentCollection.id">{{ currentCollection.title }}</a> -->
 
     <footer>
       <div class="link-home">

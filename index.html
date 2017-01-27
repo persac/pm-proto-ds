@@ -21,7 +21,7 @@
         <li id="link-art">art</li>
         <li id="link-artists">artists</li>
         <li id="link-blog">blog</li>
-        <li id="link-guide"><a href="guide.html">assistant</a></li>
+        <li id="link-guide"><a id="block-guide-top" href="guide.html"><img src="/assets/block-guide-top.gif"></a></li>
       </ul>
       <ul class="right">
         <li id="link-search"><span class="ss-icon">search</span></li>
@@ -41,14 +41,14 @@
         </div>
       </div>
       <div class="row">
-        <a class="eight columns collection" :href="'/collection.html#' + database.collections[0].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+        <a class="eight columns collection" :href="'/collection.html#' + database.collections[5].id" :style="{backgroundImage: 'url(/assets/works/' + database.collections[5].id + '.jpg)'}">
           <div class="label">
             <h4>collection</h4>
             <h2>
-              {{ database.collections[0].title }}
+              {{ database.collections[5].title }}
             </h2>
             <h3>
-              {{ database.collections[0].short }}
+              {{ database.collections[5].short }}
             </h3>
           </div>
         </a>
@@ -63,9 +63,9 @@
 
       <div class="row">
         <a id="block-guide" class="four columns image" href="guide.html">
-          <img src="/assets/block-guide.png"/>
+          <img src="/assets/block-guide.gif"/>
         </a>
-        <a class="four columns collection" :href="'/collection.html#' + database.collections[1].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+        <a class="four columns collection" :href="'/collection.html#' + database.collections[1].id" :style="{backgroundImage: 'url(/assets/works/' + database.collections[1].id + '.jpg)'}">
           <div class="label">
             <h4>collection</h4>
             <h2>
@@ -76,7 +76,7 @@
             </h3>
           </div>
         </a>
-        <a class="four columns collection" :href="'/collection.html#' + database.collections[2].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+        <a class="four columns collection" :href="'/collection.html#' + database.collections[2].id" :style="{backgroundImage: 'url(/assets/works/' + database.collections[2].id + '.jpg)'}">
           <div class="label">
             <h4>collection</h4>
             <h2>
@@ -130,7 +130,7 @@
             <h3>Cross-platform mattis consectetur purus sit amet.</h3>
           </div>
         </div>
-        <a class="four columns collection" :href="'/collection.html#' + database.collections[3].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+        <a class="four columns collection" :href="'/collection.html#' + database.collections[3].id" :style="{backgroundImage: 'url(/assets/works/' + database.collections[3].id + '.jpg)'}">
           <div class="label">
             <h4>collection</h4>
             <h2>
@@ -141,7 +141,7 @@
             </h3>
           </div>
         </a>
-        <a class="four columns collection" :href="'/collection.html#' + database.collections[4].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+        <a class="four columns collection" :href="'/collection.html#' + database.collections[4].id" :style="{backgroundImage: 'url(/assets/works/' + database.collections[4].id + '.jpg)'}">
           <div class="label">
             <h4>collection</h4>
             <h2>
@@ -166,14 +166,14 @@
             </h3>
           </div>
         </a>
-        <a class="eight columns collection" :href="'/collection.html#' + database.collections[5].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+        <a class="eight columns collection" :href="'/collection.html#' + database.collections[5].id" :style="{backgroundImage: 'url(/assets/works/' + database.collections[0].id + '.jpg)'}">
           <div class="label">
             <h4>collection</h4>
             <h2>
-              {{ database.collections[5].title }}
+              {{ database.collections[0].title }}
             </h2>
             <h3>
-              {{ database.collections[5].short }}
+              {{ database.collections[0].short }}
             </h3>
           </div>
         </a>
@@ -196,7 +196,7 @@
       </div>
       <div class="row">
         <a href="guide.html" id="block-guide-centered">
-          <img src="/assets/block-guide-centered.png"/>
+          <img src="/assets/block-guide-centered.gif"/>
         </a>
       </div>
 

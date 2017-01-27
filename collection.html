@@ -22,7 +22,7 @@
         <li id="link-art">art</li>
         <li id="link-artists">artists</li>
         <li id="link-blog">blog</li>
-        <li id="link-guide"><a href="guide.html">assistant</a></li>
+        <li id="link-guide"><a id="block-guide-top" href="guide.html"><img src="/assets/block-guide-top.gif"></a></li>
       </ul>
       <ul class="right">
         <li id="link-search" class="ss-icon">search</li>
@@ -70,7 +70,7 @@
         </p>
       </div>
       <div class="row break">
-        <a class="four columns collection" :href="'/collection.html#' + database.collections[1].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+        <a class="four columns collection" :href="'/collection.html#' + database.collections[1].id" :style="{backgroundImage: 'url(/assets/works/' + database.collections[1].id + '.jpg)'}">
           <div class="label">
             <h4>collection</h4>
             <h2>
@@ -81,7 +81,7 @@
             </h3>
           </div>
         </a>
-        <a class="four columns collection" :href="'/collection.html#' + database.collections[2].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+        <a class="four columns collection" :href="'/collection.html#' + database.collections[2].id" :style="{backgroundImage: 'url(/assets/works/' + database.collections[2].id + '.jpg)'}">
           <div class="label">
             <h4>collection</h4>
             <h2>
@@ -92,7 +92,7 @@
             </h3>
           </div>
         </a>
-        <a class="four columns collection" :href="'/collection.html#' + database.collections[3].id" style="background-image:url('http://www.w3schools.com/css/img_fjords.jpg')">
+        <a class="four columns collection" :href="'/collection.html#' + database.collections[3].id" :style="{backgroundImage: 'url(/assets/works/' + database.collections[3].id + '.jpg)'}">
           <div class="label">
             <h4>collection</h4>
             <h2>
@@ -107,7 +107,7 @@
 
       <div class="row">
         <a href="guide.html" id="block-guide-centered">
-          <img src="/assets/block-guide-centered.png"/>
+          <img src="/assets/block-guide-centered.gif"/>
         </a>
       </div>
 

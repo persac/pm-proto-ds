@@ -27,7 +27,7 @@ body {
 }
 
 .row {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .row.break {
@@ -81,7 +81,7 @@ nav#nav-main .link-home {
 }
 
 nav#nav-main ul {
-  width: 400px;;
+  width: 500px;;
   margin: 0 auto;
   list-style: none;
 }
@@ -105,13 +105,11 @@ nav#nav-main ul.right {
 }
 
 nav #link-guide {
-  padding: 0 10px 3px;
-  border-radius: 20px;
-  background-color: #1C51FF;
+  margin-top: -20px;
 }
 
 nav #link-guide a {
-  color: white;
+
 }
 
 .ss-icon {
@@ -155,6 +153,12 @@ footer .link-home {
   position: relative;
   height: 400px;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.collection:hover h2 {
+  text-decoration: underline;
 }
 
 .height-auto {
@@ -225,7 +229,7 @@ footer .link-home {
 }
 
 #block-guide img {
-  width: 382px;
+  width: 380px;
 }
 
 #block-guide-centered {
@@ -233,8 +237,12 @@ footer .link-home {
   text-align: center;
 }
 
+#block-guide-top img {
+  width: 189px;
+}
+
 #block-guide-centered img {
-  width: 417px;
+  width: 410px;
 }
 
 #block-newsletter img {
@@ -279,4 +287,42 @@ footer .link-home {
 /* Work page */
 .work-image img {
   width: 100%;
+}
+
+.work-header {
+  padding-top: 80px;
+}
+
+.work-header h1 {
+  color: black;
+  font-size: 38px;
+}
+
+.work-header h2 {
+  font-size: 14px;
+}
+
+.action-panel {
+  padding: 40px;
+  border: 1px solid #9d9d9d;
+}
+
+.price {
+  color: black;
+  font-size: 28px;
+}
+
+button {
+  background-color: #1C51FF;
+  color: white;
+  border-radius: 50px;
+  border: none;
+}
+
+button.buy-button {
+  margin-right: 10px;
+  background-color: #1C51FF;
+  color: white;
+  border-radius: 50px;
+  border: none;
 }
